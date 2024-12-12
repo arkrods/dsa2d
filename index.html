@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structures and Algorithms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Algorithms</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <div class="text-content">
+                <h1>Data Structures and Algorithms</h1>
+                <p>
+                    Master the fundamentals of Data Structures and Algorithms! Explore the concepts of sorting, searching, recursion, and much more, 
+                    designed to enhance your problem-solving skills and logic building.
+                </p>
+                <button class="btn-primary">HELLO</button>
+            </div>
+            <div class="image-content">
+                <img src="DSA (1).png" alt="Data Structures and Algorithms" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for displaying Python code and output -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Python Code</h3>
+        <pre id="modalContent"></pre>
+        <h3>Output</h3>
+        <pre id="outputContent"></pre>
+        <button id="runButton">Run Code</button>
+    </div>
+</div>
+
+    <!-- Section containing the cards -->
+<!-- Section containing the cards -->
+<section id="services" class="services">
+    <h2>What Can You Learn?</h2>
+    <div class="cards">
+        <div class="card" onclick="showModal('array')">
+            <h3>Array</h3>
+            <p>An array is a collection of elements identified by index or key, allowing easy access to elements.</p>
+        </div>
+        <div class="card" onclick="showModal('bubbleSort')">
+            <h3>Bubble Sort</h3>
+            <p>Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.</p>
+        </div>
+        <div class="card" onclick="showModal('selectionSort')">
+            <h3>Selection Sort</h3>
+            <p>Selection Sort is a sorting algorithm that divides the list into two parts: sorted and unsorted. It repeatedly selects the smallest (or largest) element from the unsorted part and swaps it with the first unsorted element.</p>
+        </div>
+        <div class="card" onclick="showModal('insertionSort')">
+            <h3>Insertion Sort</h3>
+            <p>Insertion Sort builds the sorted list one element at a time by repeatedly picking the next element from the unsorted part and inserting it into its correct position.</p>
+        </div>
+        <div class="card" onclick="showModal('countingSort')">
+            <h3>Counting Sort</h3>
+            <p>Counting Sort is a non-comparative sorting algorithm that sorts elements by counting the number of occurrences of each distinct element and using that information to place the elements in the sorted output.</p>
+        </div>
+        <div class="card" onclick="showModal('radixSort')">
+            <h3>Radix Sort</h3>
+            <p>Radix Sort is a non-comparative sorting algorithm that processes the digits of numbers starting from the least significant digit to the most significant digit.</p>
+        </div>
+        <div class="card" onclick="showModal('singleLinkedList')">
+            <h3>Single Linked List</h3>
+            <p>A Single Linked List is a linear data structure where elements are stored in nodes, and each node points to the next node in the list.</p>
+        </div>
+        <div class="card" onclick="showModal('doubleLinkedList')">
+            <h3>Double Linked List</h3>
+            <p>A Double Linked List is a type of linked list where each node contains two pointers, one to the next node and one to the previous node.</p>
+        </div>
+        <div class="card" onclick="showModal('circularLinkedList')">
+            <h3>Circular Linked List</h3>
+            <p>A Circular Linked List is a variation of a linked list where the last node points back to the first node, forming a loop.</p>
+        </div>
+        <div class="card" onclick="showModal('infixToPrefix')">
+            <h3>Infix to Prefix Conversion</h3>
+            <p>Infix to Prefix conversion is a technique for converting mathematical expressions from infix notation (e.g., A + B) to prefix notation (e.g., + A B), useful for evaluating expressions in computer programs.</p>
+        </div>
+        <div class="card" onclick="showModal('infixToPostfix')">
+            <h3>Infix to Postfix Conversion</h3>
+            <p>Infix to Postfix conversion changes infix expressions (like A + B) to postfix notation (like A B +), which is easier for computers to evaluate.</p>
+        </div>
+        <div class="card" onclick="showModal('postfixEvaluation')">
+            <h3>Postfix Evaluation</h3>
+            <p>Postfix evaluation is the process of evaluating an expression in postfix notation, where operators follow their operands (e.g., AB+).</p>
+        </div>
+        <div class="card" onclick="showModal('treeInorderTraversal')">
+            <h3>Tree Inorder Traversal</h3>
+            <p>Inorder Traversal is a tree traversal method where the nodes are recursively visited in the following order: left subtree, root, right subtree.</p>
+        </div>
+        
+        <div class="card" onclick="showModal('treePreorderTraversal')">
+            <h3>Tree Preorder Traversal</h3>
+            <p>Preorder Traversal is a tree traversal method where the nodes are recursively visited in the following order: root, left subtree, right subtree.</p>
+        </div>
+        
+        <div class="card" onclick="showModal('treePostorderTraversal')">
+            <h3>Tree Postorder Traversal</h3>
+            <p>Postorder Traversal is a tree traversal method where the nodes are recursively visited in the following order: left subtree, right subtree, root.</p>
+        </div>        
+        <div class="card" onclick="showModal('queues')">
+            <h3>Queues</h3>
+            <p>A Queue is a linear data structure that follows the First-In-First-Out (FIFO) principle, where the first element inserted is the first to be removed.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Structure -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Python Code</h3>
+        <pre id="modalContent"></pre>
+        <h3>Output</h3>
+        <pre id="outputContent"></pre>
+        <button id="runButton">Run Code</button>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+    // Function to show modal with Python code based on clicked card
+    function showModal(topic) {
+    let pythonCode = '';
+
+    
+    // Provide pseudocode and Python code for each topic
+    switch (topic) {
+        case 'array':
+            pseudocode = `1. Initialize an array with elements [1, 2, 3, 4, 5].\n2. Print the array.`;
+            pythonCode = `# Array implementation\narr = [1, 2, 3, 4, 5]\nprint("Array:", arr)`;
+            break;
+        case 'bubbleSort':
+            pseudocode = `1. Loop through the array from start to end.\n2. Compare adjacent elements.\n3. Swap elements if they are in the wrong order.\n4. Repeat until the array is sorted.`;
+            pythonCode = `# Bubble Sort implementation\narr = [64, 34, 25, 12, 22, 11, 90]\nfor i in range(len(arr)):\n    for j in range(0, len(arr)-i-1):\n        if arr[j] > arr[j+1]:\n            arr[j], arr[j+1] = arr[j+1], arr[j]\nprint("Sorted array:", arr)`;
+            break;
+        case 'selectionSort':
+            pseudocode = `1. Loop through the array.\n2. Find the minimum element in the remaining unsorted part.\n3. Swap it with the first unsorted element.\n4. Repeat until the array is sorted.`;
+            pythonCode = `# Selection Sort implementation\narr = [64, 25, 12, 22, 11]\nfor i in range(len(arr)): \n    min_idx = i\n    for j in range(i+1, len(arr)):\n        if arr[j] < arr[min_idx]:\n            min_idx = j\n    arr[i], arr[min_idx] = arr[min_idx], arr[i]\nprint("Sorted array:", arr)`;
+            break;
+        case 'insertionSort':
+            pseudocode = `1. Loop through the array starting from the second element.\n2. Store the current element as the key.\n3. Shift all larger elements one position to the right.\n4. Insert the key in the correct position.`;
+            pythonCode = `# Insertion Sort implementation\narr = [64, 25, 12, 22, 11]\nfor i in range(1, len(arr)):\n    key = arr[i]\n    j = i - 1\n    while j >= 0 and key < arr[j]:\n        arr[j + 1] = arr[j]\n        j -= 1\n    arr[j + 1] = key\nprint("Sorted array:", arr)`;
+            break;
+        case 'countingSort':
+            pseudocode = `1. Find the maximum value in the array.\n2. Create a count array to store the frequency of each element.\n3. For each element in the input array, increase its count in the count array.\n4. Rebuild the sorted array using the count array.`;
+            pythonCode = `# Counting Sort implementation\narr = [4, 2, 2, 8, 3, 3, 1]\nmax_val = max(arr)\ncount = [0] * (max_val + 1)\nfor num in arr:\n    count[num] += 1\narr = []\nfor i in range(len(count)):\n    arr.extend([i] * count[i])\nprint("Sorted array:", arr)`;
+            break;
+        case 'radixSort':
+            pseudocode = `1. Find the maximum value in the array.\n2. Perform counting sort for every digit starting from the least significant digit.\n3. Continue sorting until the most significant digit is sorted.`;
+            pythonCode = `# Radix Sort implementation\narr = [170, 45, 75, 90, 802, 24, 2, 66]\nmax_val = max(arr)\nexp = 1\nwhile max_val // exp > 0:\n    output = [0] * len(arr)\n    count = [0] * 10\n    for num in arr:\n        index = (num // exp) % 10\n        count[index] += 1\n    for i in range(1, 10):\n        count[i] += count[i-1]\n    for i in range(len(arr)-1, -1, -1):\n        num = arr[i]\n        index = (num // exp) % 10\n        output[count[index] - 1] = num\n        count[index] -= 1\n    arr = output\n    exp *= 10\nprint("Sorted array:", arr)`;
+            break;
+        case 'singleLinkedList':
+            pseudocode = `1. Create a Node class with data and next pointer.\n2. Create nodes and link them together.\n3. Traverse the linked list from the head node to the last node.`;
+            pythonCode = `# Single Linked List implementation\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\nnode1 = Node(1)\nnode2 = Node(2)\nnode1.next = node2\ncurrent = node1\nwhile current:\n    print(current.data, end=" -> ")\n    current = current.next`;
+            break;
+        case 'doubleLinkedList':
+            pseudocode = `1. Create a Node class with data, next, and prev pointers.\n2. Create nodes and link them in both directions.\n3. Traverse the linked list from the head to the tail, printing the data.`;
+            pythonCode = `# Double Linked List implementation\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n        self.prev = None\nnode1 = Node(1)\nnode2 = Node(2)\nnode1.next = node2\nnode2.prev = node1\ncurrent = node1\nwhile current:\n    print(current.data, end=" <-> ")\n    current = current.next`;
+            break;
+        case 'circularLinkedList':
+            pseudocode = `1. Create a Node class with data and next pointer.\n2. Link the last node to the first node to form a circular linked list.\n3. Traverse the circular linked list starting from the first node.`;
+            pythonCode = `# Circular Linked List implementation\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\nnode1 = Node(1)\nnode2 = Node(2)\nnode1.next = node2\nnode2.next = node1\ncurrent = node1\nwhile True:\n    print(current.data, end=" -> ")\n    current = current.next\n    if current == node1:\n        break`;
+            break;
+        case 'stack':
+            pseudocode = `1. Initialize an empty stack.\n2. Push elements onto the stack.\n3. Pop elements from the stack.`;
+            pythonCode = `# Stack implementation using list\nstack = []\nstack.append(1)\nstack.append(2)\nstack.append(3)\nprint("Stack:", stack)\nstack.pop()\nprint("Stack after pop:", stack)`;
+            break;
+        case 'infixToPrefix':
+            pseudocode = `1. Reverse the infix expression.\n2. Convert the reversed expression to postfix.\n3. Reverse the postfix result to get the prefix expression.`;
+            pythonCode = `# Infix to Prefix Conversion\nclass Stack:\n    def __init__(self):\n        self.stack = []\n    def push(self, item):\n        self.stack.append(item)\n    def pop(self):\n        return self.stack.pop()\n    def top(self):\n        return self.stack[-1]\n    def is_empty(self):\n        return len(self.stack) == 0\n\ndef infix_to_prefix(expression):\n    operators = set(['+', '-', '*', '/', '^'])\n    stack = Stack()\n    output = []\n    expression = expression[::-1]\n    for char in expression:\n        if char.isalnum():\n            output.append(char)\n        elif char == ')':\n            stack.push(char)\n        elif char == '(': \n            while stack.top() != ')':\n                output.append(stack.pop())\n            stack.pop()\n        elif char in operators:\n            while (not stack.is_empty() and stack.top() != ')' and\n                   precedence(char) <= precedence(stack.top())):\n                output.append(stack.pop())\n            stack.push(char)\n    while not stack.is_empty():\n        output.append(stack.pop())\n    return ''.join(output[::-1])\n\ndef precedence(op):\n    if op == '^':\n        return 3\n    if op == '*' or op == '/':\n        return 2\n    if op == '+' or op == '-':\n        return 1\n    return 0\n\nprint(infix_to_prefix("(A-B/C)*(A/K-L)"))`;
+            break;
+        case 'infixToPostfix':
+            pseudocode = `1. Process the infix expression from left to right.\n2. Push operands to the output.\n3. Push operators to a stack, and pop them to output when needed.`;
+            pythonCode = `# Infix to Postfix Conversion\nclass Stack:\n    def __init__(self):\n        self.stack = []\n    def push(self, item):\n        self.stack.append(item)\n    def pop(self):\n        return self.stack.pop()\n    def top(self):\n        return self.stack[-1]\n    def is_empty(self):\n        return len(self.stack) == 0\n\ndef infix_to_postfix(expression):\n    operators = set(['+', '-', '*', '/', '^'])\n    stack = Stack()\n    output = []\n    for char in expression:\n        if char.isalnum():\n            output.append(char)\n        elif char == '(': \n            stack.push(char)\n        elif char == ')':\n            while stack.top() != '(': \n                output.append(stack.pop())\n            stack.pop()\n        elif char in operators:\n            while (not stack.is_empty() and stack.top() != '(' and\n                   precedence(char) <= precedence(stack.top())):\n                output.append(stack.pop())\n            stack.push(char)\n    while not stack.is_empty():\n        output.append(stack.pop())\n    return ''.join(output)\n\ndef precedence(op):\n    if op == '^':\n        return 3\n    if op == '*' or op == '/':\n        return 2\n    if op == '+' or op == '-':\n        return 1\n    return 0\n\nprint(infix_to_postfix("(A-B/C)*(A/K-L)"))`;
+            break;
+        case 'postfixEvaluation':
+            pseudocode = `1. Traverse the postfix expression.\n2. Push operands to the stack.\n3. Pop operands for each operator and perform the operation.\n4. Push the result back to the stack.`;
+            pythonCode = `# Postfix Evaluation\nclass Stack:\n    def __init__(self):\n        self.stack = []\n    def push(self, item):\n        self.stack.append(item)\n    def pop(self):\n        return self.stack.pop()\n    def top(self):\n        return self.stack[-1]\n    def is_empty(self):\n        return len(self.stack) == 0\n\ndef postfix_evaluation(expression):\n    stack = Stack()\n    for char in expression:\n        if char.isdigit():\n            stack.push(int(char))\n        else:\n            b = stack.pop()\n            a = stack.pop()\n            if char == '+':\n                stack.push(a + b)\n            elif char == '-':\n                stack.push(a - b)\n            elif char == '*':\n                stack.push(a * b)\n            elif char == '/':\n                stack.push(a / b)\n    return stack.pop()\n\nprint(postfix_evaluation('23*54*+9-'))`;
+            break;
+            case 'treeInorderTraversal':
+    pseudocode = `1. Traverse the left subtree.\n2. Visit the current node.\n3. Traverse the right subtree.`;
+    pythonCode = `# Inorder Tree Traversal\nclass TreeNode:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\nroot = TreeNode(1)\nroot.left = TreeNode(2)\nroot.right = TreeNode(3)\nroot.left.left = TreeNode(4)\nroot.left.right = TreeNode(5)\n\ndef inorder_traversal(node):\n    if node is not None:\n        inorder_traversal(node.left)\n        print(node.value, end=' ')\n        inorder_traversal(node.right)\n\ninorder_traversal(root)`;
+    break;
+
+case 'treePreorderTraversal':
+    pseudocode = `1. Visit the current node.\n2. Traverse the left subtree.\n3. Traverse the right subtree.`;
+    pythonCode = `# Preorder Tree Traversal\nclass TreeNode:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\nroot = TreeNode(1)\nroot.left = TreeNode(2)\nroot.right = TreeNode(3)\nroot.left.left = TreeNode(4)\nroot.left.right = TreeNode(5)\n\ndef preorder_traversal(node):\n    if node is not None:\n        print(node.value, end=' ')\n        preorder_traversal(node.left)\n        preorder_traversal(node.right)\n\npreorder_traversal(root)`;
+    break;
+
+case 'treePostorderTraversal':
+    pseudocode = `1. Traverse the left subtree.\n2. Traverse the right subtree.\n3. Visit the current node.`;
+    pythonCode = `# Postorder Tree Traversal\nclass TreeNode:\n    def __init__(self, value):\n        self.value = value\n        self.left = None\n        self.right = None\nroot = TreeNode(1)\nroot.left = TreeNode(2)\nroot.right = TreeNode(3)\nroot.left.left = TreeNode(4)\nroot.left.right = TreeNode(5)\n\ndef postorder_traversal(node):\n    if node is not None:\n        postorder_traversal(node.left)\n        postorder_traversal(node.right)\n        print(node.value, end=' ')\n\npostorder_traversal(root)`;
+    break;
+
+        case 'queues':
+            pseudocode = `1. Initialize an empty queue.\n2. Add elements to the queue using enqueue.\n3. Remove elements from the queue using dequeue.\n4. Check if the queue is empty.`;
+            pythonCode = `# Queue Implementation\nclass Queue:\n    def __init__(self):\n        self.queue = []\n    def enqueue(self, item):\n        self.queue.append(item)\n    def dequeue(self):\n        return self.queue.pop(0)\n    def is_empty(self):\n        return len(self.queue) == 0\nq = Queue()\nq.enqueue(1)\nq.enqueue(2)\nq.enqueue(3)\nprint("Queue:", q.queue)\nq.dequeue()\nprint("Queue after dequeue:", q.queue)`;
+            break;
+    }
+
+    // Display pseudocode and Python code in the modal
+    document.getElementById("modalContent").textContent = "Pseudocode:\n" + pseudocode + "\n\nPython Code:\n" + pythonCode;
+
+    // Show the modal
+    document.getElementById("myModal").style.display = "block";
+
+    // Simulate code output on 'Run Code' click
+    document.getElementById("runButton").onclick = function() {
+        let output = '';
+        switch (topic) {
+            case 'array':
+                output = '[1, 2, 3, 4, 5]';
+                break;
+            case 'bubbleSort':
+                output = '[11, 12, 22, 34, 34, 64, 90]';
+                break;
+            case 'selectionSort':
+                output = '[11, 12, 22, 25, 64]';
+                break;
+            case 'insertionSort':
+                output = '[11, 12, 22, 25, 64]';
+                break;
+            case 'countingSort':
+                output = '[1, 2, 2, 3, 3, 4, 8]';
+                break;
+            case 'radixSort':
+                output = '[2, 24, 45, 66, 75, 90, 170, 802]';
+                break;
+            case 'singleLinkedList':
+                output = '1 -> 2 -> null';
+                break;
+            case 'doubleLinkedList':
+                output = '1 <-> 2 <-> null';
+                break;
+            case 'circularLinkedList':
+                output = '1 -> 2 -> ...';
+                break;
+            case 'stack':
+                output = '[1, 2, 3]';
+                break;
+            case 'infixToPrefix':
+                output = '(-/BC)*-AKL';
+                break;
+            case 'infixToPostfix':
+                output = 'ABC/-AKL*-';
+                break;
+            case 'postfixEvaluation':
+                output = '1';
+                break;
+                case 'treeInorderTraversal':
+    output = '4 2 5 1 3';  // Inorder Traversal: Left, Root, Right
+    break;
+
+case 'treePreorderTraversal':
+    output = '1 2 4 5 3';  // Preorder Traversal: Root, Left, Right
+    break;
+
+case 'treePostorderTraversal':
+    output = '4 5 2 3 1';  // Postorder Traversal: Left, Right, Root
+    break;
+
+            case 'queues':
+                output = '[2, 3]';
+                break;
+        }
+        document.getElementById("outputContent").textContent = output;
+    };
+}
+
+
+    // Close the modal when clicked on 'x'
+document.querySelector('.close').onclick = function() {
+    // Hide the modal
+    document.getElementById("myModal").style.display = "none";
+    
+    // Clear the output content
+    document.getElementById("outputContent").textContent = '';
+}
+
+// Close the modal if clicked outside of it
+window.onclick = function(event) {
+    if (event.target === document.getElementById("myModal")) {
+        // Hide the modal
+        document.getElementById("myModal").style.display = "none";
+        
+        // Clear the output content
+        document.getElementById("outputContent").textContent = '';
+    }
+}
+</script>
+
+
+</body>
+</html>
